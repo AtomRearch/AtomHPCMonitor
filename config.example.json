@@ -1,0 +1,70 @@
+{
+  "state_dir": "runtime",
+  "poll_seconds": 300,
+  "settle_seconds": 120,
+  "unknown_seconds": 600,
+  "read_bytes": 8388608,
+  "auto_discovery": {
+    "enabled": true,
+    "accounts": [
+      "gaussian_user",
+      "hpc_user"
+    ],
+    "program": "all"
+  },
+  "history": {
+    "enabled": true,
+    "lookback_hours": 24,
+    "max_jobs": 100
+  },
+  "reports": {
+    "enabled": false,
+    "accounts": [
+      "hpc_user"
+    ],
+    "programs": [
+      "g16",
+      "vasp"
+    ],
+    "start_date": "2026-01-01",
+    "end_date": "2026-12-31",
+    "times": [
+      "07:30",
+      "13:00",
+      "21:30"
+    ],
+    "only_on_change": true,
+    "timezone": "UTC+08:00",
+    "catch_up_minutes": 60
+  },
+  "accounts": {
+    "gaussian_user": {
+      "programs": [
+        "g16"
+      ],
+      "default_logs": {
+        "g16": "1.log"
+      }
+    },
+    "hpc_user": {
+      "programs": [
+        "g16",
+        "vasp"
+      ],
+      "default_logs": {
+        "g16": "slurm-{job_id}.out",
+        "vasp": "OUTCAR"
+      }
+    }
+  },
+  "smtp": {
+    "enabled": false,
+    "host": "smtp.example.com",
+    "port": 465,
+    "timeout": 30,
+    "credentials_file": "smtp.local.json",
+    "sender_env": "ATOMHPC_SMTP_SENDER",
+    "password_env": "ATOMHPC_SMTP_PASSWORD",
+    "receiver_env": "ATOMHPC_SMTP_RECEIVER"
+  }
+}

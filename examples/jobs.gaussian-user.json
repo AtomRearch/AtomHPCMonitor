@@ -1,0 +1,15 @@
+[
+  {
+    "job_id": "123456",
+    "name": "molecule-opt-freq",
+    "batch": "example-batch",
+    "program": "g16",
+    "task": "opt_freq",
+    "workdir": "/home/gaussian_user/REPLACE_WITH_CALC_DIR",
+    "log": "1.log",
+    "expected_links": 1,
+    "expected_imaginary": 0,
+    "imaginary_tolerance": 0,
+    "adopt_existing": false
+  }
+]

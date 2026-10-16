@@ -1,0 +1,23 @@
+[
+  {
+    "job_id": "123457",
+    "name": "molecule-sp",
+    "batch": "example-batch",
+    "program": "g16",
+    "task": "sp",
+    "workdir": "/home/hpc_user/REPLACE_WITH_G16_DIR",
+    "log": "slurm-123457.out",
+    "adopt_existing": false
+  },
+  {
+    "job_id": "123458",
+    "name": "structure-relax",
+    "batch": "example-batch",
+    "program": "vasp",
+    "task": "relax",
+    "workdir": "/home/hpc_user/REPLACE_WITH_VASP_DIR",
+    "log": "OUTCAR",
+    "aux_logs": ["slurm-123458.out", "slurm-123458.err"],
+    "adopt_existing": false
+  }
+]

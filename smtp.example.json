@@ -1,0 +1,5 @@
+{
+  "sender": "sender@example.com",
+  "password": "REPLACE_WITH_SMTP_APP_PASSWORD",
+  "receiver": "you@example.com"
+}

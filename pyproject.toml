@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "atomhpcmonitor"
+version = "0.4.4"
+description = "Read-only Slurm Gaussian 16 / VASP monitoring and durable email notifications"
+requires-python = ">=3.7"
+dependencies = []
+readme = "README.md"
+license = {file = "LICENSE"}
+
+[project.urls]
+Homepage = "https://github.com/AtomRearch/AtomHPCMonitor"
+Issues = "https://github.com/AtomRearch/AtomHPCMonitor/issues"
+
+[project.scripts]
+atomhpc = "atomhpcmonitor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["atomhpcmonitor*"]
